@@ -45,7 +45,8 @@ def main(args):
         plt.plot(triangle[:,1], triangle[:,0], color='black', linewidth=0.1)
 
     plt.axis('off')
-    plt.savefig('scatter_plot.png', bbox_inches='tight', pad_inches=0)
+    plt.savefig(args.output, bbox_inches='tight', pad_inches=0)
+    print(f'The output image saved at {args.output}')
 
 if __name__ == '__main__':
     parser = ArgumentParser()

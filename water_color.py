@@ -32,14 +32,16 @@ def main(args):
 
     radius = args.radius
     if radius == -1: 
-        radius = max(round(min(pixels.shape[0], pixels.shape[1]) * 0.004), 2)
+        radius = max(round(min(pixels.shape[0], pixels.shape[1]) * 0.0035), 2)
 
     for _ in range(3):
         pixels = denoise(pixels, radius)
     
     pixels = sharpen(pixels)
-    pixels = denoise(pixels, radius)
+    pixels = denoise(pixels, 3)
     Image.fromarray(np.uint8(pixels)).convert('RGB').save(args.output)
+    print(f'The output image saved at {args.output}')
+
 
 if __name__ == '__main__':
     parser = ArgumentParser()

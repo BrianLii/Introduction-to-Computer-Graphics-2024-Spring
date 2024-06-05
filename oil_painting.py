@@ -39,14 +39,14 @@ def main(args):
     output_b = sum_b[max_intensity, I, J] // max_intensity_count
 
     output_image = np.stack((output_r, output_g, output_b), axis=2)
+    Image.fromarray(np.uint8(output_image)).convert('RGB').save(args.output)
     print(f'The output image saved at {args.output}')
-    return Image.fromarray(np.uint8(output_image)).convert('RGB').save(args.output)
 
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument('--input', type=str, required=True)
     parser.add_argument('--output', type=str, default='output.jpg')
-    parser.add_argument('--radius', type=int, default=5)
+    parser.add_argument('--radius', type=int, default=-1)
     parser.add_argument('--n_intensity', type=int, default=10)
     args = parser.parse_args()
     main(args)
