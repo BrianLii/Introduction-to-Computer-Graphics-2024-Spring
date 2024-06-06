@@ -1,3 +1,5 @@
+mkdir -p results/{oil_painting,water_color,stained_glass}/taj_mahal
+
 python oil_painting.py --input taj_mahal/720.jpg --output results/oil_painting/taj_mahal/720.jpg
 python oil_painting.py --input taj_mahal/1080.jpg --output results/oil_painting/taj_mahal/1080.jpg
 python oil_painting.py --input taj_mahal/1440.jpg --output results/oil_painting/taj_mahal/1440.jpg
