@@ -1,4 +1,5 @@
 input=demo/original.jpg
+mkdir -p demo
 
 python oil_painting.py --input $input --output demo/oil_painting.jpg
 python water_color.py --input $input --output demo/water_color.jpg
