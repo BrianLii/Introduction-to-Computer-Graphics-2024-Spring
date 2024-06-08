@@ -46,6 +46,9 @@ def main(args):
 
     plt.axis('off')
     plt.savefig(args.output, bbox_inches='tight', pad_inches=0)
+    with Image.open(args.output) as img:
+        img = img.resize((width, height))
+        img.save(args.output)
     print(f'The output image saved at {args.output}')
 
 if __name__ == '__main__':
