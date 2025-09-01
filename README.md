@@ -1,6 +1,6 @@
 # Computer Graphics Final Project
 
-In this project I implemented three types of effect, including Oil Painting Effect, Water Color Effect, and Stained Glass Effect. These effects can be can be applied to any given image. 
+In this project I implemented three types of effect, including Oil Painting Effect, Water Color Effect, and Stained Glass Effect. These effects can be can be applied to any given image.
 
 ## Result Demo
 
@@ -52,7 +52,7 @@ The idea originated from [3]. I discovered that combining a median filter with a
 ## How to run the program
 
 1. Set Up the Environment
-   
+
     * Prepare a Python 3.9 environment and install the required packages:
         ```bash
         pip install -r requirements.txt
@@ -71,13 +71,13 @@ The idea originated from [3]. I discovered that combining a median filter with a
                 [--output=<output image>] \
                 [--radius=<radius>] \
                 [--n_intensity=<number of intensity levels>]
-        
+
         python stained_glass.py \
                 --input=<input image> \
                 --n_points=<number of sampled points> \
                 [--output=<output image>] \
                 [--seed=<random seed>]
-        
+
         python water_color.py \
                 --input=<input image> \
                 [--output=<output image>] \
@@ -85,9 +85,9 @@ The idea originated from [3]. I discovered that combining a median filter with a
                 [--texture=<texture file>]
         ```
 4. Reproduce the Report Results
-   
+
     * To reproduce the results shown in the report, run the following script:
-    
+
         ```
         bash make_report.sh
         ```
